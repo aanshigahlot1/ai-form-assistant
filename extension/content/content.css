@@ -1,0 +1,15 @@
+/* content/content.css — injected into every page alongside content.js */
+/* Tooltip and indicator styles are injected via JS for scoping, but this handles
+   any global resets or overrides needed for the extension UI */
+
+/* Ensure our elements don't inherit page styles */
+.__aifa_tip *,
+.__aifa_tip *::before,
+.__aifa_tip *::after {
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+}
+
+.__aifa_tip button:hover {
+  opacity: 0.85;
+}

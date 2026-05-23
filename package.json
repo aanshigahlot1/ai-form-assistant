@@ -1,0 +1,25 @@
+{
+  "name": "ai-job-form-assistant",
+  "version": "1.0.0",
+  "description": "AI-powered Chrome Extension for autofilling job/internship application forms",
+  "private": true,
+  "scripts": {
+    "install:all": "npm run install:popup && npm run install:backend",
+    "install:popup": "cd extension/popup && npm install",
+    "install:backend": "cd backend && npm install",
+    "build": "npm run build:popup && npm run build:extension",
+    "build:popup": "cd extension/popup && npm run build",
+    "build:extension": "node scripts/build-extension.js",
+    "dev:popup": "cd extension/popup && npm run dev",
+    "dev:backend": "cd backend && npm run dev",
+    "dev": "concurrently \"npm run dev:popup\" \"npm run dev:backend\"",
+    "package": "node scripts/package-extension.js",
+    "icons": "node scripts/generate-icons.js",
+    "setup": "npm run install:all && npm run icons && echo '✅ Setup complete! Run: npm run build'"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2",
+    "archiver": "^7.0.1"
+  },
+  "type": "module"
+}

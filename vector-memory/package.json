@@ -1,0 +1,14 @@
+{
+  "name": "ai-form-assistant-vector-memory",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "ChromaDB vector memory service for semantic Q&A matching",
+  "scripts": {
+    "test": "node test-chroma.js",
+    "index-profile": "node scripts/index-profile.js"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.32.1",
+    "dotenv": "^16.4.7"
+  }
+}
